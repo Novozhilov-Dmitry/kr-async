@@ -1,8 +1,6 @@
 async function krData(god, strana_cod){
     try{
-        const god1 = god.value;
-        const strana_cod1 = strana_cod.value;
-        const response = await fetch(`https://date.nager.at/api/v3/PublicHolidays/${god1}/${strana_cod1}`)
+        const response = await fetch(`https://date.nager.at/api/v3/PublicHolidays/${god.value}/${strana_cod.value}`)
         let data = await response.json();
         await getValue(data);
     }catch(err){
